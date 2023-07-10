@@ -1,0 +1,13 @@
+[Unit]
+Description=Realsense T265 Service
+
+[Service]
+WorkingDirectory=/home/ubuntu/vision_to_mavros
+Type=simple
+Restart=on-failure
+RestartSec=10
+User=ubuntu
+ExecStart=/home/ubuntu/vision_to_mavros/t265_to_mavlink.py
+
+[Install]
+WantedBy=multi-user.target
